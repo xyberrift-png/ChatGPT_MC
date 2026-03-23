@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Lucky Spin Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <main class="app-card">
+        <section class="hero-panel">
+          <div class="hero-copy">
+            <p class="eyebrow">Random Wheel Generator</p>
+            <h1>自訂你的隨機轉盤</h1>
+            <p class="hero-description">
+              輸入選項、立即抽籤。針對 Apple iPad 觸控操作與 Windows 桌面瀏覽器優化，適合聚會、課堂、抽獎與日常決策。
+            </p>
+          </div>
+
+          <div class="wheel-stage">
+            <div class="wheel-pointer" aria-hidden="true"></div>
+            <div class="wheel-glow"></div>
+            <div class="wheel-shell">
+              <div class="wheel" id="wheel" role="img" aria-label="隨機轉盤"></div>
+              <div class="wheel-center">SPIN</div>
+            </div>
+          </div>
+
+          <div class="result-panel" aria-live="polite">
+            <span class="result-label">本次結果</span>
+            <strong id="resultText">請先新增選項，然後開始旋轉。</strong>
+          </div>
+        </section>
+
+        <section class="control-panel">
+          <div class="panel-header">
+            <div>
+              <p class="eyebrow">Options Editor</p>
+              <h2>設定轉盤內容</h2>
+            </div>
+            <span class="device-pill">iPad & Windows Ready</span>
+          </div>
+
+          <label class="input-label" for="optionInput">輸入選項（每行一個）</label>
+          <textarea id="optionInput" spellcheck="false">午餐吃拉麵
+午餐吃漢堡
+午餐吃便當
+午餐吃咖哩
+今天喝奶茶
+今天喝咖啡</textarea>
+
+          <div class="quick-actions">
+            <button class="ghost-button" id="sampleButton" type="button">載入範例</button>
+            <button class="ghost-button" id="shuffleButton" type="button">隨機排序</button>
+            <button class="ghost-button" id="clearButton" type="button">清空內容</button>
+          </div>
+
+          <div class="primary-actions">
+            <button class="secondary-button" id="updateButton" type="button">更新轉盤</button>
+            <button class="primary-button" id="spinButton" type="button">開始旋轉</button>
+          </div>
+
+          <div class="tips-grid">
+            <article>
+              <h3>觸控友善</h3>
+              <p>按鈕尺寸、間距與版面針對平板操作調整，橫向與直向都舒適。</p>
+            </article>
+            <article>
+              <h3>大螢幕清楚</h3>
+              <p>在 Windows 電腦上會使用雙欄版面，保留轉盤視覺重點與編輯效率。</p>
+            </article>
+            <article>
+              <h3>即時自訂</h3>
+              <p>變更選項後立即重繪轉盤，適合抽獎、分組、點餐與靈感發想。</p>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
